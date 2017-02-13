@@ -25,9 +25,7 @@ Use ngrok to test your local TuiseBot:
 
 ## React App Installation
 
-1. Follow the instructions on React Native's official documentation depending on your development operating system:
-
-* [Install React-Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
+1.  Follow the instructions on [React Native's official documentation](https://facebook.github.io/react-native/docs/getting-started.html#content) depending on your development operating system.
 
 2.  Clone tuise-bot-hackfridays: `https://github.com/Cloudoki/tuise-bot-hackfridays.git`
 
