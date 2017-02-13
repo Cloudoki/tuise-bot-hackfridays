@@ -30,7 +30,7 @@ let styles = StyleSheet.create({
 })
 
 // Insert your ngrok address here
-const address = 'https://7f4f8694.ngrok.io'
+const address = 'https://f766cda3.ngrok.io'
 
 let InputField = React.createClass({
 

@@ -19,7 +19,7 @@ Use ngrok to test your local TuiseBot:
 * Download [ngrok](https://ngrok.com/download) and place it in your `tuise-bot` directory
 * Run ngrok by telling it what port your web server is listening on:
 ```
-./ngrok http 80
+./ngrok http 8080
 ```
 
 
@@ -77,7 +77,7 @@ react-native run-ios
 │   ├── reducers              # Redux reducers. Your state is altered here based on actions
 │       ├── index.js          # Combines all reducers into one
 │   ├── store                 # Redux store configuration
-│   ├── TuiseBot.js             # Entry point for your app
+│   ├── TuiseBot.js           # Entry point for your app
 ```
 
 

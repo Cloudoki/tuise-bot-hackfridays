@@ -5,9 +5,7 @@ import android.util.Log;
 
 import com.facebook.react.ReactApplication;
 import com.oblador.vectoricons.VectorIconsPackage;
-import com.zmxv.RNSound.RNSoundPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
-import com.rnim.rn.audio.ReactNativeAudioPackage;
 import com.burnweb.rnsimplealertdialog.RNSimpleAlertDialogPackage;
 import com.i18n.reactnativei18n.ReactNativeI18n;
 import com.facebook.react.ReactInstanceManager;
@@ -31,9 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new VectorIconsPackage(),
-            new RNSoundPackage(),
             new RNFetchBlobPackage(),
-            new ReactNativeAudioPackage(),
             new RNSimpleAlertDialogPackage(),
             new ReactNativeI18n()
       );
