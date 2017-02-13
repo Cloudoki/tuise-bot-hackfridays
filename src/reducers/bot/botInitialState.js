@@ -4,7 +4,7 @@
 'use strict'
 
 export default {
-      language: 'Portuguese',
-      isLoading: false,
-      result: ''
-};
+  language: 'Portuguese',
+  isLoading: false,
+  result: ''
+}

@@ -11,7 +11,7 @@
  */
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { Actions } from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux'
 
 /**
  * Project actions
@@ -26,21 +26,20 @@ import
 {
   StyleSheet,
   View,
-  ScrollView,
   Text
 }
 from 'react-native'
 
 import InputField from '../components/InputField'
 import LanguagePicker from '../components/LanguagePicker'
-import Spinner from 'react-native-loading-spinner-overlay';
+import Spinner from 'react-native-loading-spinner-overlay'
 
 /**
  *  Save that state
  */
 function mapStateToProps (state) {
   return {
-    bot : state.bot,
+    bot: state.bot
   }
 }
 
@@ -55,7 +54,7 @@ function mapDispatchToProps (dispatch) {
 
 let styles = StyleSheet.create({
   centered: {
-    flexDirection:'row',
+    flexDirection: 'row',
     justifyContent: 'center'
   },
   separator: {
@@ -69,12 +68,9 @@ let styles = StyleSheet.create({
 let reactMixin = require('react-mixin')
 import TimerMixin from 'react-timer-mixin'
 
-
-const address = 'https://4c22e507.ngrok.io';
-
 let App = React.createClass({
 
-  render() {
+  render () {
     return (
         <View style={{padding: 20}}>
 

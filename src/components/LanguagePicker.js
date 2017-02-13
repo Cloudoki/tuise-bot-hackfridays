@@ -13,7 +13,6 @@ import
 {
   StyleSheet,
   View,
-  Text,
   Picker
 } from 'react-native'
 
@@ -22,22 +21,21 @@ import
  */
 let styles = StyleSheet.create({
   centered: {
-    flexDirection:'row',
+    flexDirection: 'row',
     justifyContent: 'center'
   }
 })
 
-
 let LanguagePicker = React.createClass({
 
-  _onLanguageChange(lang) {
+  _onLanguageChange (lang) {
     this.props.setLanguage(lang)
   },
 
-  render() {
+  render () {
     return (
       <View style={styles.centered}>
-        <Picker style={{width:200}}
+        <Picker style={{width: 200}}
           selectedValue={this.props.language}
           onValueChange={(lang) => this._onLanguageChange(lang)}>
           <Picker.Item label="Portuguese" value="Portuguese" />

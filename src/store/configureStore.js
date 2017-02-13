@@ -13,7 +13,7 @@
  */
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import devTools from 'remote-redux-devtools';
+import devTools from 'remote-redux-devtools'
 
 /**
 * ## Reducer
@@ -26,7 +26,7 @@ import reducer from '../reducers'
  * ## creatStoreWithMiddleware
  * Like the name...
  */
- const createStoreWithMiddleware = compose(applyMiddleware(thunk), devTools())(createStore);
+const createStoreWithMiddleware = compose(applyMiddleware(thunk), devTools())(createStore)
 
 /**
  * ## configureStore
