@@ -30,7 +30,7 @@ let styles = StyleSheet.create({
 })
 
 // Insert your ngrok address here
-const address = 'https://f766cda3.ngrok.io'
+const address = 'https://b2deacb6.ngrok.io'
 
 let InputField = React.createClass({
 
@@ -47,14 +47,20 @@ let InputField = React.createClass({
   },
 
   _makeRequest (text, command) {
+    if (text === '') {
+      alert("Please insert some text.")
+      return
+    }
+
     let selectedLanguage = this.props.language
     let sentence = command + ' ' + text
 
     this.props.actions.setLoading(true)
     Keyboard.dismiss()
 
-    if (command === 'translate')
+    if (command === 'translate') {
       sentence += ' to ' + selectedLanguage
+    }
 
     fetch(address + '/execute', {
       method: 'POST',
@@ -72,7 +78,9 @@ let InputField = React.createClass({
         this.props.actions.setLoading(false)
         return responseJson
       }).catch((error) => {
-        console.error(error)
+        this.props.actions.setLoading(false)
+        alert(error)
+        // console.error(error)
       })
   },
 

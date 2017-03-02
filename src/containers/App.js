@@ -56,9 +56,6 @@ let styles = StyleSheet.create({
   centered: {
     flexDirection: 'row',
     justifyContent: 'center'
-  },
-  separator: {
-    marginTop: 40
   }
 })
 
@@ -75,28 +72,31 @@ let App = React.createClass({
         <View style={{padding: 20}}>
 
           <View style={styles.centered}>
-            <Text>TUISE BOT</Text>
+            <Text style={{color: 'red', fontSize: 20, fontWeight: 'bold'}}>TUISE BOT</Text>
           </View>
           <View style={{ flex: 1 }}>
             <Spinner visible={this.props.bot.isLoading}></Spinner>
           </View>
 
-          <LanguagePicker language={this.props.bot.language}
-                          setLanguage={this.props.actions.setLanguage}/>
+          <View>
+            <LanguagePicker language={this.props.bot.language}
+                            setLanguage={this.props.actions.setLanguage}/>
 
-          <InputField command="translate"
-                      language={this.props.bot.language}
-                      actions={this.props.actions}
-                      isLoading={this.props.bot.isLoading}/>
+            <InputField command="translate"
+                        language={this.props.bot.language}
+                        actions={this.props.actions}
+                        isLoading={this.props.bot.isLoading}/>
+          </View>
 
-          <View style={styles.separator}></View>
+          <View style={{marginTop: 40}}>
+            <InputField command="question"
+                        language={this.props.bot.language}
+                        actions={this.props.actions}
+                        isLoading={this.props.bot.isLoading}/>
+          </View>
 
-          <InputField command="question"
-                      language={this.props.bot.language}
-                      actions={this.props.actions}
-                      isLoading={this.props.bot.isLoading}/>
-
-          <Text style={{marginTop: 20}}>Result: {this.props.bot.result}</Text>
+          <Text style={{marginTop: 20}}>Result:</Text>
+          <Text>{this.props.bot.result}</Text>
 
       </View>
     )
