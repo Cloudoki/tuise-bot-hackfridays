@@ -9,11 +9,7 @@
  * Necessary components from ReactNative
  */
 import React from 'react'
-import {
-    AppRegistry,
-    StyleSheet,
-    View,
-    Text } from 'react-native'
+import { AppRegistry, Platform } from 'react-native'
 
 /**
  * ### Router-Flux
@@ -39,7 +35,6 @@ import {
  *
  */
 import configureStore from './store/configureStore'
-
 
 /**
  * ### containers
@@ -75,7 +70,6 @@ function getInitialState () {
   return _initState
 }
 
-
 /**
  * ## Native
  *
@@ -85,7 +79,6 @@ function getInitialState () {
 export default function native (platform) {
   let TuiseBot = React.createClass({
     render () {
-
       // configureStore will combine reducers from snowflake and main application
       // it will then create the store based on aggregate state from all reducers
       const store = configureStore(getInitialState())
@@ -106,6 +99,7 @@ export default function native (platform) {
     /**
      * registerComponent to the AppRegistery and off we go....
      */
+  const registryName = (Platform.OS === 'ios') ? 'TuiseBot' : 'tuisebot'
 
-  AppRegistry.registerComponent('tuisebot', () => TuiseBot)
+  AppRegistry.registerComponent(registryName, () => TuiseBot)
 }
